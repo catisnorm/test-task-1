@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TestDbService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65133/TestDbService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:65133/TestDbService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:65133/TestDbService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TestWebApi.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ITestDbService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_GetUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUser" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_GetUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_AddSubscription_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubscription" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_AddSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_GetSubscriptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscriptions" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_GetSubscriptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscriptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_GetSubscription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscription" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_GetSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_CreateSubscription_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSubscription" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_CreateSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_UpdateSubscription_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubscription" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_UpdateSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_DeleteSubscription_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubscription" />
+  </wsdl:message>
+  <wsdl:message name="ITestDbService_DeleteSubscription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ITestDbService">
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/GetUsers" message="tns:ITestDbService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/GetUsersResponse" message="tns:ITestDbService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/GetUser" message="tns:ITestDbService_GetUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/GetUserResponse" message="tns:ITestDbService_GetUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/CreateUser" message="tns:ITestDbService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/CreateUserResponse" message="tns:ITestDbService_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSubscription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/AddSubscription" message="tns:ITestDbService_AddSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/AddSubscriptionResponse" message="tns:ITestDbService_AddSubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/DeleteUser" message="tns:ITestDbService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/DeleteUserResponse" message="tns:ITestDbService_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriptions">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/GetSubscriptions" message="tns:ITestDbService_GetSubscriptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/GetSubscriptionsResponse" message="tns:ITestDbService_GetSubscriptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/GetSubscription" message="tns:ITestDbService_GetSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/GetSubscriptionResponse" message="tns:ITestDbService_GetSubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSubscription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/CreateSubscription" message="tns:ITestDbService_CreateSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/CreateSubscriptionResponse" message="tns:ITestDbService_CreateSubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubscription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/UpdateSubscription" message="tns:ITestDbService_UpdateSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/UpdateSubscriptionResponse" message="tns:ITestDbService_UpdateSubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubscription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITestDbService/DeleteSubscription" message="tns:ITestDbService_DeleteSubscription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITestDbService/DeleteSubscriptionResponse" message="tns:ITestDbService_DeleteSubscription_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ITestDbService" type="tns:ITestDbService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUser">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/GetUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSubscription">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/AddSubscription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscriptions">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/GetSubscriptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubscription">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/GetSubscription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSubscription">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/CreateSubscription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubscription">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/UpdateSubscription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSubscription">
+      <soap:operation soapAction="http://tempuri.org/ITestDbService/DeleteSubscription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestDbService">
+    <wsdl:port name="BasicHttpBinding_ITestDbService" binding="tns:BasicHttpBinding_ITestDbService">
+      <soap:address location="http://localhost:65133/TestDbService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

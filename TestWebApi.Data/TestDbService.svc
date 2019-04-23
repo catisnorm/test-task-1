@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="TestWebApi.Data.TestDbService" CodeBehind="TestDbService.svc.cs" Factory="Ninject.Extensions.Wcf.NinjectServiceHostFactory" %>

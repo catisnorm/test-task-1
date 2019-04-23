@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="61f7f033-8f82-41b7-8cfe-6d932e6f7ffd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:65133/TestDbService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TestDbService.wsdl" MetadataType="Wsdl" ID="08a21638-6ad0-4cd5-808c-3afb26217816" SourceId="1" SourceUrl="http://localhost:65133/TestDbService.svc?wsdl" />
+    <MetadataFile FileName="TestDbService.disco" MetadataType="Disco" ID="44a11c24-d4b5-491f-873b-5393f5556aea" SourceId="1" SourceUrl="http://localhost:65133/TestDbService.svc?disco" />
+    <MetadataFile FileName="TestDbService.xsd" MetadataType="Schema" ID="a1af9f7b-63bb-4779-ba0b-257014c7ab22" SourceId="1" SourceUrl="http://localhost:65133/TestDbService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TestDbService1.xsd" MetadataType="Schema" ID="36ee1317-bc16-4bf6-af00-59fe1a4f9b70" SourceId="1" SourceUrl="http://localhost:65133/TestDbService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TestDbService2.xsd" MetadataType="Schema" ID="bc392d68-8610-4dce-a34f-ba0492fd5e3c" SourceId="1" SourceUrl="http://localhost:65133/TestDbService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
